@@ -7,7 +7,7 @@ type ItemProps = {
 function Item({ title }: ItemProps) {
   return (
     <li>
-      <a className="text-medium text-lg text-zinc-700" href="#">
+      <a className="text-medium text-lg text-zinc-600" href="#">
         {title}
       </a>
     </li>
@@ -29,10 +29,10 @@ export function Navbar() {
 
       <div className="flex items-center gap-3 p-4">
         <a href="#">
-          <Github className="h-5 w-5 text-zinc-700" />
+          <Github className="h-5 w-5 text-zinc-600" />
         </a>
         <a href="#">
-          <Linkedin className="h-5 w-5 text-zinc-700" />
+          <Linkedin className="h-5 w-5 text-zinc-600" />
         </a>
       </div>
     </nav>
