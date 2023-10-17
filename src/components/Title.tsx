@@ -3,5 +3,5 @@ type TitleProps = {
 }
 
 export function Title({ text }: TitleProps) {
-  return <strong className="text-port-blue-800 text-5xl">{text}</strong>
+  return <strong className="text-5xl text-port-blue-800">{text}</strong>
 }

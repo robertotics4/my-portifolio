@@ -2,12 +2,13 @@ import { Github, Linkedin } from 'lucide-react'
 
 type ItemProps = {
   title: string
+  uri: string
 }
 
-function Item({ title }: ItemProps) {
+function Item({ title, uri }: ItemProps) {
   return (
     <li>
-      <a className="text-medium text-port-gray-600 text-lg" href="#">
+      <a className="text-medium text-lg text-port-gray-600" href={uri}>
         {title}
       </a>
     </li>
@@ -20,19 +21,19 @@ export function Navbar() {
       <strong>Logo</strong>
 
       <ul className="ml-auto flex space-x-10 p-4">
-        <Item title="Home" />
-        <Item title="Layout" />
-        <Item title="Tech Stack" />
-        <Item title="Projects" />
-        <Item title="Contact" />
+        <Item title="Home" uri="/" />
+        <Item title="Layout" uri="/layout" />
+        <Item title="Tech Stack" uri="/tech-stack" />
+        <Item title="Projects" uri="/projects" />
+        <Item title="Contact" uri="/contact" />
       </ul>
 
       <div className="flex items-center gap-3 p-4">
         <a href="#">
-          <Github className="text-port-gray-600 h-5 w-5" />
+          <Github className="h-5 w-5 text-port-gray-600" />
         </a>
         <a href="#">
-          <Linkedin className="text-port-gray-600 h-5 w-5" />
+          <Linkedin className="h-5 w-5 text-port-gray-600" />
         </a>
       </div>
     </nav>

@@ -16,11 +16,11 @@ import { Subtitle } from './Subtitle'
 
 export function TechStack() {
   return (
-    <div className="mt-96 flex flex-col items-center gap-4">
+    <div className="mt-32 flex flex-col gap-4">
       <Title text="Minha Tech Stack" />
       <Subtitle text="Tecnologias que tenho trabalhado recentemente" />
 
-      <div className="mt-24 grid grid-cols-6 gap-28">
+      <div className="mt-24 grid grid-cols-6 place-items-center gap-28">
         <TechImage src={javascript} alt="Logo do Javascript" />
         <TechImage src={typescript} alt="Logo do Typescript" />
         <TechImage src={java} alt="Logo do Java" />

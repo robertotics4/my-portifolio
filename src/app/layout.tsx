@@ -14,10 +14,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="bg-zinc-50">
-        <div className="mx-auto min-h-screen max-w-7xl py-6">
+      <body className="flex h-screen flex-col items-center bg-zinc-50 py-6">
+        <div className="flex h-full w-full max-w-7xl flex-col">
           <Navbar />
-          <main>{children}</main>
+          <main className="flex-1">{children}</main>
         </div>
       </body>
     </html>

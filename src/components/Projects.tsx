@@ -4,7 +4,7 @@ import { Title } from './Title'
 
 export function Projects() {
   return (
-    <div className="mt-40 flex flex-col items-center gap-4">
+    <div className="mt-32 flex flex-col gap-4">
       <Title text="Projetos" />
       <Subtitle text="O que construí até agora?" />
 
