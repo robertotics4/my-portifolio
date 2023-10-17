@@ -3,7 +3,7 @@ import profileImage from '../../public/assets/profile.png'
 
 export function Presentation() {
   return (
-    <div className="mt-60 flex place-content-between items-center">
+    <div className="mt-44 flex place-content-between items-center">
       <div className="max-w-2x">
         <strong className="text-6xl text-port-blue-800">
           Olá 👋,

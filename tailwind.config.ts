@@ -11,6 +11,7 @@ const config: Config = {
         '84': '21rem',
       },
       colors: {
+        'port-gray-300': '#cccccc',
         'port-gray-600': '#666666',
         'port-blue-400': '#13B0F5',
         'port-pink-400': '#E70FAA',

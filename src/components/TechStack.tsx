@@ -20,7 +20,7 @@ export function TechStack() {
       <Title text="Minha Tech Stack" />
       <Subtitle text="Tecnologias que tenho trabalhado recentemente" />
 
-      <div className="mt-24 grid grid-cols-6 place-items-center gap-28">
+      <div className="my-24 grid grid-cols-6 place-items-center gap-28">
         <TechImage src={javascript} alt="Logo do Javascript" />
         <TechImage src={typescript} alt="Logo do Typescript" />
         <TechImage src={java} alt="Logo do Java" />

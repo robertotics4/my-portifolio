@@ -1,4 +1,4 @@
-import { Github, Linkedin } from 'lucide-react'
+import { SocialMedia } from './SocialMedia'
 
 type ItemProps = {
   title: string
@@ -20,7 +20,7 @@ export function Navbar() {
     <nav className="flex items-center">
       <strong>Logo</strong>
 
-      <ul className="ml-auto flex space-x-10 p-4">
+      <ul className="ml-auto flex space-x-12 p-4">
         <Item title="Home" uri="/" />
         <Item title="Layout" uri="/layout" />
         <Item title="Tech Stack" uri="/tech-stack" />
@@ -28,14 +28,7 @@ export function Navbar() {
         <Item title="Contact" uri="/contact" />
       </ul>
 
-      <div className="flex items-center gap-3 p-4">
-        <a href="#">
-          <Github className="h-5 w-5 text-port-gray-600" />
-        </a>
-        <a href="#">
-          <Linkedin className="h-5 w-5 text-port-gray-600" />
-        </a>
-      </div>
+      <SocialMedia />
     </nav>
   )
 }
