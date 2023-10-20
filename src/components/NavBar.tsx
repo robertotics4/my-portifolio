@@ -21,11 +21,11 @@ export function Navbar() {
       <strong>Logo</strong>
 
       <ul className="ml-auto flex space-x-12 p-4">
-        <Item title="Home" uri="/" />
-        <Item title="About" uri="/about" />
+        <Item title="Início" uri="/" />
+        <Item title="Sobre" uri="/about" />
         <Item title="Tech Stack" uri="/tech-stack" />
-        <Item title="Projects" uri="/projects" />
-        <Item title="Contact" uri="/contact" />
+        <Item title="Projetos" uri="/projects" />
+        <Item title="Contatos" uri="/contact" />
       </ul>
 
       <SocialMedia />
