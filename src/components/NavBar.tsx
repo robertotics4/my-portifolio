@@ -22,7 +22,7 @@ export function Navbar() {
 
       <ul className="ml-auto flex space-x-12 p-4">
         <Item title="Home" uri="/" />
-        <Item title="Layout" uri="/layout" />
+        <Item title="About" uri="/about" />
         <Item title="Tech Stack" uri="/tech-stack" />
         <Item title="Projects" uri="/projects" />
         <Item title="Contact" uri="/contact" />
