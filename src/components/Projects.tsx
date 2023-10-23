@@ -6,7 +6,7 @@ export function Projects() {
   return (
     <div className="mt-32 flex flex-col gap-4">
       <Title text="Projetos" />
-      <Subtitle text="O que construí até agora?" />
+      <Subtitle text="O que construí até agora?" fontSize="lg" />
 
       <div className="my-16 grid grid-cols-3 gap-8">
         <ProjectItem />

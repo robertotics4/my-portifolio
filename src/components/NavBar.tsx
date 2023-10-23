@@ -10,7 +10,7 @@ function Item({ title, uri }: ItemProps) {
   return (
     <li>
       <a
-        className="text-medium font-secondary text-lg text-port-gray-600"
+        className="text-medium font-secondary text-base text-port-gray-600 hover:text-port-blue-800"
         href={uri}
       >
         {title}

@@ -18,7 +18,10 @@ export function TechStack() {
   return (
     <div className="mt-32 flex flex-col gap-4">
       <Title text="Minha Tech Stack" />
-      <Subtitle text="Tecnologias que tenho trabalhado recentemente" />
+      <Subtitle
+        text="Tecnologias que tenho trabalhado recentemente"
+        fontSize="lg"
+      />
 
       <div className="my-24 grid grid-cols-6 place-items-center gap-28">
         <TechImage src={javascript} alt="Logo do Javascript" />
