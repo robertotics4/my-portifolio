@@ -1,18 +1,25 @@
 import { Github, Link } from 'lucide-react'
 
-function Links() {
+type LinkProps = {
+  icon: React.ReactElement
+  title: string
+  url: string
+}
+
+function LinkItem({ icon, title, url }: LinkProps) {
+  return (
+    <a href={url} className="flex gap-2 text-port-blue-800 hover:underline">
+      {icon}
+      <span className="font-secondary text-base font-normal">{title}</span>
+    </a>
+  )
+}
+
+function LinksContainer() {
   return (
     <div className="gap4 mt-6 flex justify-between">
-      <a href="#" className="flex gap-2 text-port-blue-800 hover:underline">
-        <Link />
-        <span className="font-secondary text-base font-normal">
-          Live Preview
-        </span>
-      </a>
-      <a href="#" className="flex gap-2 text-port-blue-800 hover:underline">
-        <Github />
-        <span className="font-secondary text-base font-normal">View Code</span>
-      </a>
+      <LinkItem icon={<Link size={20} />} title="Live Preview" url="#" />
+      <LinkItem icon={<Github size={20} />} title="View Code" url="#" />
     </div>
   )
 }
@@ -39,7 +46,7 @@ export function ProjectItem() {
           Tech stack: tech 01, tech 02, tech 03...
         </p>
 
-        <Links />
+        <LinksContainer />
       </div>
     </div>
   )
