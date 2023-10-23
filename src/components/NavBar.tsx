@@ -1,3 +1,4 @@
+import { Logo } from './Logo'
 import { SocialMedia } from './SocialMedia'
 
 type ItemProps = {
@@ -8,7 +9,10 @@ type ItemProps = {
 function Item({ title, uri }: ItemProps) {
   return (
     <li>
-      <a className="text-medium text-lg text-port-gray-600" href={uri}>
+      <a
+        className="text-medium font-secondary text-lg text-port-gray-600"
+        href={uri}
+      >
         {title}
       </a>
     </li>
@@ -18,7 +22,7 @@ function Item({ title, uri }: ItemProps) {
 export function Navbar() {
   return (
     <nav className="flex items-center">
-      <strong>Logo</strong>
+      <Logo />
 
       <ul className="ml-auto flex space-x-12 p-4">
         <Item title="Início" uri="/" />

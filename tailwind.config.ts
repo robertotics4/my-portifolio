@@ -23,6 +23,12 @@ const config: Config = {
       borderRadius: {
         '2.5xl': '1.25rem',
       },
+      fontFamily: {
+        'logo-primary': ['"Quicksand", sans-serif'],
+        'logo-secondary': ['"Montserrat", sans-serif'],
+        primary: ['"DM Sans", sans-serif'],
+        secondary: ['"Poppins", sans-serif'],
+      },
     },
   },
   plugins: [],
