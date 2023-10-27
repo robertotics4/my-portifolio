@@ -8,45 +8,87 @@ type LinkProps = {
 
 function LinkItem({ icon, title, url }: LinkProps) {
   return (
-    <a href={url} className="flex gap-2 text-port-blue-800 hover:underline">
+    <a
+      href={url}
+      target="_blank"
+      className="flex gap-2 text-port-blue-800 hover:underline"
+    >
       {icon}
       <span className="font-secondary text-base font-normal">{title}</span>
     </a>
   )
 }
 
-function LinksContainer() {
+type LinksContainerProps = {
+  livePreview?: string
+  github?: string
+}
+
+function LinksContainer({ livePreview, github }: LinksContainerProps) {
   return (
     <div className="gap4 mt-6 flex justify-between">
-      <LinkItem icon={<Link size={20} />} title="Live Preview" url="#" />
-      <LinkItem icon={<Github size={20} />} title="View Code" url="#" />
+      {livePreview && (
+        <LinkItem
+          icon={<Link size={20} />}
+          title="Live Preview"
+          url={livePreview || '#'}
+        />
+      )}
+
+      {github && (
+        <LinkItem
+          icon={<Github size={20} />}
+          title="View Code"
+          url={github || '#'}
+        />
+      )}
     </div>
   )
 }
 
-export function ProjectItem() {
+type ProjectItemProps = {
+  title: string
+  description: string
+  techs: string[]
+  links?: {
+    livePreview?: string
+    github?: string
+  }
+  imageUrl?: string
+}
+
+export function ProjectItem({
+  title,
+  description,
+  techs,
+  links,
+  imageUrl,
+}: ProjectItemProps) {
+  const defaultImage = 'https://via.placeholder.com/400x200'
+
   return (
     <div className="h-[35.43rem] rounded-2.5xl bg-white shadow-2xl">
       <img
-        src="https://via.placeholder.com/400x200"
+        src={imageUrl || defaultImage}
         alt="Imagem de Capa"
         className="h-64 w-full rounded-t-2.5xl object-cover"
       />
 
       <div className="p-6">
         <h2 className="text-center font-secondary text-2xl font-medium text-port-blue-800">
-          Título do Card
+          {title}
         </h2>
-        <p className="mt-2 font-secondary text-lg font-light text-port-gray-600">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry standard dummy text ever
-          since the 1500s
+        <p className="mt-2 line-clamp-6 max-h-36 text-justify font-secondary text-base font-light text-port-gray-600">
+          {description}
         </p>
-        <p className="font-secondary text-sm font-normal text-port-gray-600">
-          Tech stack: tech 01, tech 02, tech 03...
+        <p className="mt-2 truncate font-secondary text-sm font-normal text-port-gray-600">
+          Tech stack: {techs.join(', ')}
         </p>
 
-        <LinksContainer />
+        <LinksContainer
+          livePreview={links?.livePreview}
+          github={links?.github}
+        />
       </div>
     </div>
   )
