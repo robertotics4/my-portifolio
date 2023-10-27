@@ -34,10 +34,10 @@ export function ProjectItem() {
       />
 
       <div className="p-6">
-        <h2 className="font-secondary text-center text-2xl font-medium text-port-blue-800">
+        <h2 className="text-center font-secondary text-2xl font-medium text-port-blue-800">
           Título do Card
         </h2>
-        <p className="font-secondary mt-2 text-lg font-light text-port-gray-600">
+        <p className="mt-2 font-secondary text-lg font-light text-port-gray-600">
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry standard dummy text ever
           since the 1500s
