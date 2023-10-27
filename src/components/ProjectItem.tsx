@@ -73,7 +73,6 @@ export function ProjectItem({
         alt="Imagem de Capa"
         className="h-64 w-full rounded-t-2.5xl object-cover"
       />
-
       <div className="p-6">
         <h2 className="text-center font-secondary text-2xl font-medium text-port-blue-800">
           {title}
