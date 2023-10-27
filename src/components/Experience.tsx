@@ -31,7 +31,7 @@ function Work({
       </div>
 
       <div className="flex items-center justify-between">
-        <div className="flex gap-24">
+        <div className="flex gap-6">
           <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
             <Building size={18} />
             {company}
@@ -58,7 +58,7 @@ export function Experience() {
       <div className="flex flex-col gap-10">
         <Work
           company="PULSE - Grupo Mateus"
-          office="Senior Software Developer"
+          office="Backend Developer Senior"
           location="Remoto | São Luis - Maranhão"
           workload="full time"
           startDate={formatDateToPtBr(
@@ -69,7 +69,7 @@ export function Experience() {
         />
         <Work
           company="MKOM Soluções Tecnológicas"
-          office="Software developer"
+          office="Backend Developer Pleno"
           location="Remoto"
           workload="flex"
           startDate={formatDateToPtBr(
@@ -80,7 +80,19 @@ export function Experience() {
         />
         <Work
           company="Instituto Equatorial"
-          office="Software developer Pleno"
+          office="Full Stack Developer Pleno"
+          location="Remoto"
+          workload="flex"
+          startDate={formatDateToPtBr(
+            new Date(
+              'Thu Dec 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)',
+            ),
+          )}
+        />
+
+        <Work
+          company="Núcleo de Estudos e Pesquisas do Nordeste"
+          office="Full Stack Developer Pleno"
           location="Remoto"
           workload="flex"
           startDate={formatDateToPtBr(

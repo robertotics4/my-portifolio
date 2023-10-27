@@ -1,5 +1,4 @@
 import { Logo } from './Logo'
-import { SocialMedia } from './SocialMedia'
 
 type ItemProps = {
   title: string
@@ -31,8 +30,6 @@ export function Navbar() {
         <Item title="Projetos" uri="/projects" />
         <Item title="Contatos" uri="/contact" />
       </ul>
-
-      <SocialMedia />
     </nav>
   )
 }

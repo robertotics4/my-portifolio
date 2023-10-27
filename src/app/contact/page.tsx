@@ -7,7 +7,7 @@ import { ContactButton } from '@/components/ContactButton'
 export default function ContactPage() {
   return (
     <div className="mt-48 flex flex-col items-center gap-8">
-      <Title text="Deixe uma mensagem 📪" />
+      <Title text="Contatos 📪" />
 
       <div className="flex gap-8">
         <ContactButton
