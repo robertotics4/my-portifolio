@@ -1,13 +1,14 @@
 import { Building, CalendarDays, MapPin } from 'lucide-react'
 import { Title } from './Title'
+import { formatDateToPtBr } from '@/util/formatDateToPtBR'
 
 type WorkProps = {
   company: string
   office: string
-  workload: 'full time' | 'part time'
+  workload: 'full time' | 'part time' | 'flex'
   location: string
-  startDate: Date
-  finalDate?: Date
+  startDate: string
+  finalDate?: string
 }
 
 function Work({
@@ -24,27 +25,25 @@ function Work({
         <span className="font-secondary text-2xl font-normal text-port-blue-800">
           {office}
         </span>
-        <span className="font-secondary rounded-full bg-port-green-50 px-8 py-2 text-sm font-semibold text-port-green-800">
+        <span className="rounded-full bg-port-green-50 px-8 py-2 font-secondary text-sm font-semibold text-port-green-800">
           {workload}
         </span>
       </div>
 
       <div className="flex items-center justify-between">
         <div className="flex gap-24">
-          <span className="font-secondary flex items-center gap-2 text-xs font-medium text-port-gray-400">
+          <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
             <Building size={18} />
             {company}
           </span>
-          <span className="font-secondary flex items-center gap-2 text-xs font-medium text-port-gray-400">
+          <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
             <MapPin size={18} />
             {location}
           </span>
         </div>
-        <span className="font-secondary flex items-center gap-2 text-xs font-medium text-port-gray-400">
+        <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
           <CalendarDays size={18} />
-          {`${startDate.toISOString()} - ${
-            finalDate?.toISOString() || 'atual'
-          }`}
+          {`${startDate} - ${finalDate || 'atual'}`}
         </span>
       </div>
     </div>
@@ -54,36 +53,41 @@ function Work({
 export function Experience() {
   return (
     <div className="flex flex-col gap-8">
-      <Title text="Experiência" />
+      <Title text="Experiência Profissional" />
 
       <div className="flex flex-col gap-10">
         <Work
           company="PULSE - Grupo Mateus"
-          office="Software developer"
-          location="São Luis - Maranhão"
+          office="Senior Software Developer"
+          location="Remoto | São Luis - Maranhão"
           workload="full time"
-          startDate={new Date()}
+          startDate={formatDateToPtBr(
+            new Date(
+              'Wed Jun 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)',
+            ),
+          )}
         />
         <Work
-          company="PULSE - Grupo Mateus"
+          company="MKOM Soluções Tecnológicas"
           office="Software developer"
-          location="São Luis - Maranhão"
-          workload="full time"
-          startDate={new Date()}
+          location="Remoto"
+          workload="flex"
+          startDate={formatDateToPtBr(
+            new Date(
+              'Thu Dec 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)',
+            ),
+          )}
         />
         <Work
-          company="PULSE - Grupo Mateus"
-          office="Software developer"
-          location="São Luis - Maranhão"
-          workload="full time"
-          startDate={new Date()}
-        />
-        <Work
-          company="PULSE - Grupo Mateus"
-          office="Software developer"
-          location="São Luis - Maranhão"
-          workload="full time"
-          startDate={new Date()}
+          company="Instituto Equatorial"
+          office="Software developer Pleno"
+          location="Remoto"
+          workload="flex"
+          startDate={formatDateToPtBr(
+            new Date(
+              'Thu Dec 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)',
+            ),
+          )}
         />
       </div>
     </div>
