@@ -19,6 +19,7 @@ const config: Config = {
         'port-blue-800': '#42446E',
         'port-green-50': '#D7FFE0',
         'port-green-800': '#018C0F',
+        'port-green-850': '#005C4B',
       },
       borderRadius: {
         '2.5xl': '1.25rem',
