@@ -7,12 +7,6 @@ type ContactButtonProps = {
 }
 
 export function ContactButton({ url, icon, title }: ContactButtonProps) {
-  console.log({
-    url,
-    icon,
-    title,
-  })
-
   return (
     <a
       href={url}
