@@ -3,7 +3,7 @@ import profileImage from '../../public/assets/profile.png'
 
 export function Presentation() {
   return (
-    <div className="mt-24 flex flex-col items-center gap-8 text-center lg:mt-44 lg:flex-row-reverse lg:place-content-between lg:gap-0 lg:text-left">
+    <div className="mt-24 flex flex-col items-center gap-14 text-center lg:mt-44 lg:flex-row-reverse lg:place-content-between lg:gap-0 lg:text-left">
       <div className="flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-r from-port-blue-400 to-port-pink-400 lg:h-84 lg:w-84">
         <Image
           src={profileImage}
