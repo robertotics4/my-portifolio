@@ -25,7 +25,7 @@ function Item({ title, uri }: ItemProps) {
 export function Navbar() {
   return (
     <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col lg:relative lg:flex-row lg:place-content-between lg:items-center">
-      <div className="flex w-full place-content-between items-center bg-zinc-50 p-4 lg:px-0">
+      <div className="flex w-full place-content-between items-center bg-zinc-50 p-4 shadow-md lg:px-0 lg:shadow-transparent">
         <Logo />
         <Collapsible.Trigger asChild className="lg:hidden">
           <button

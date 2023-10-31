@@ -35,7 +35,7 @@ function Work({
           <Building size={18} />
           {company}
         </span>
-        <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
+        <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400 lg:ml-8 lg:mr-auto">
           <MapPin size={18} />
           {location}
         </span>
