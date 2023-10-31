@@ -31,7 +31,7 @@ type LinksContainerProps = {
 
 function LinksContainer({ livePreview, github }: LinksContainerProps) {
   return (
-    <div className="gap4 mt-6 flex justify-between">
+    <div className="mt-6 flex justify-between gap-4">
       {livePreview && (
         <LinkItem
           type="preview"
@@ -68,17 +68,17 @@ export function ProjectItem({
   const defaultImage = 'https://via.placeholder.com/400x200'
 
   return (
-    <div className="h-[35.43rem] rounded-2.5xl bg-white shadow-2xl">
+    <div className="h-[35.43rem] rounded-2.5xl bg-white shadow-xl lg:shadow-2xl">
       <img
         src={imageUrl || defaultImage}
         alt="Imagem de Capa"
         className="h-64 w-full rounded-t-2.5xl object-cover"
       />
       <div className="p-6">
-        <h2 className="text-center font-secondary text-2xl font-medium text-port-blue-800">
+        <h2 className="lg:text-2x3 text-center font-secondary text-xl font-medium text-port-blue-800">
           {title}
         </h2>
-        <p className="mt-2 line-clamp-6 max-h-36 text-justify font-secondary text-base font-light text-port-gray-600">
+        <p className="mt-2 line-clamp-6 h-36 text-justify font-secondary text-sm font-light text-port-gray-600 lg:text-base">
           {description}
         </p>
         <p className="mt-2 truncate font-secondary text-sm font-normal text-port-gray-600">
