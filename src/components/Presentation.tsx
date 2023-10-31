@@ -1,4 +1,7 @@
+'use client'
+
 import Image from 'next/image'
+import Typed from 'react-typed'
 import profileImage from '../../public/assets/profile.png'
 
 export function Presentation() {
@@ -13,13 +16,28 @@ export function Presentation() {
       </div>
 
       <div className="max-w-lg lg:max-w-2xl">
-        <strong className="font-primary text-4xl text-port-blue-800 lg:text-6xl">
+        <Typed
+          strings={[
+            'Olá 👋, meu nome é Roberto Oliveira e transformo ideias em soluções de tecnologia',
+          ]}
+          typeSpeed={20}
+          className="font-primary text-4xl font-bold text-port-blue-800 lg:text-6xl"
+          onStringTyped={(arrayPos: number, self: any) => {
+            if (arrayPos === 0) {
+              self.el.innerHTML = self.el.innerHTML.replace(
+                'Roberto Oliveira',
+                '<span class="bg-gradient-to-r from-port-blue-400 to-port-pink-400 bg-clip-text text-transparent">Roberto Oliveira</span>',
+              )
+            }
+          }}
+        />
+        {/* <strong className="font-primary text-4xl text-port-blue-800 lg:text-6xl">
           Olá 👋, meu nome é{' '}
           <strong className="bg-gradient-to-r from-port-blue-400 to-port-pink-400 bg-clip-text text-transparent">
             Roberto Oliveira{' '}
           </strong>
           e transformo ideias em soluções de tecnologia
-        </strong>
+        </strong> */}
       </div>
     </div>
   )
