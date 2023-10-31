@@ -25,7 +25,7 @@ function Item({ title, uri }: ItemProps) {
 export function Navbar() {
   return (
     <Collapsible.Root className="fixed left-0 right-0 top-0 z-20 flex flex-col lg:relative lg:flex-row lg:place-content-between lg:items-center">
-      <div className="flex w-full place-content-between items-center p-4">
+      <div className="flex w-full place-content-between items-center bg-zinc-50 p-4 lg:px-0">
         <Logo />
         <Collapsible.Trigger asChild className="lg:hidden">
           <button
@@ -37,7 +37,10 @@ export function Navbar() {
         </Collapsible.Trigger>
       </div>
 
-      <Collapsible.Content>
+      <Collapsible.Content
+        forceMount
+        className="data-[state=closed]:hidden lg:data-[state=closed]:flex"
+      >
         <ul className="flex h-screen flex-col items-center bg-zinc-50 lg:h-auto lg:flex-row lg:space-x-12">
           <Item title="Início" uri="/" />
           <Item title="Sobre" uri="/about" />
