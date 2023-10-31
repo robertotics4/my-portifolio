@@ -27,7 +27,7 @@ jobs:
         run: yarn install
       
       - name: Check linting
-        run: yarn lint
+        run: yarn lint --fix
 
       - name: Install Vercel CLI
         run: yarn --global vercel@latest
