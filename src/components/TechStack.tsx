@@ -23,7 +23,7 @@ export function TechStack() {
         fontSize="lg"
       />
 
-      <div className="my-24 grid grid-cols-6 place-items-center gap-28">
+      <div className="my-14 grid grid-cols-3 place-items-center gap-24  lg:my-24 lg:grid-cols-6 lg:gap-28">
         <TechImage src={javascript} alt="Logo do Javascript" />
         <TechImage src={typescript} alt="Logo do Typescript" />
         <TechImage src={java} alt="Logo do Java" />

@@ -3,7 +3,7 @@ import { Title } from './Title'
 
 export function Resume() {
   return (
-    <div className="flex flex-col gap-8">
+    <div className="flex flex-col gap-4 lg:gap-8">
       <Title text="Sobre mim" />
       <div>
         <Paragraph text="Sou um desenvolvedor back-end com mais de 3 anos de experiência na criação de software. Nasci em 1992 e tenho conhecimentos sólidos em Programação Orientada a Objetos, Node.js, Typescript, Javascript, React.js, Java, SpringBoot e bancos de dados relacionais e não relacionais." />

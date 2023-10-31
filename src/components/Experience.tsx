@@ -20,27 +20,25 @@ function Work({
   finalDate,
 }: WorkProps) {
   return (
-    <div className="flex flex-col gap-3 border-b border-b-port-gray-300 p-4 last:border-none">
+    <div className="flex flex-col gap-3 border-b border-b-port-gray-300 py-4 last:border-none">
       <div className="flex items-center justify-between">
-        <span className="font-secondary text-2xl font-normal text-port-blue-800">
+        <span className="font-secondary text-xl font-normal text-port-blue-800 lg:text-2xl">
           {office}
         </span>
-        <span className="w-36 rounded-full bg-port-green-50 p-2 text-center font-secondary text-sm font-semibold text-port-green-800">
+        <span className="w-24 rounded-full bg-port-green-50 p-2 text-center font-secondary text-xs font-semibold text-port-green-800 lg:w-36 lg:text-sm">
           {workload}
         </span>
       </div>
 
-      <div className="flex items-center justify-between">
-        <div className="flex gap-6">
-          <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
-            <Building size={18} />
-            {company}
-          </span>
-          <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
-            <MapPin size={18} />
-            {location}
-          </span>
-        </div>
+      <div className="flex flex-col justify-between gap-2 lg:flex-row lg:items-center lg:gap-0">
+        <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
+          <Building size={18} />
+          {company}
+        </span>
+        <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
+          <MapPin size={18} />
+          {location}
+        </span>
         <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
           <CalendarDays size={18} />
           {`${startDate} - ${finalDate || 'atual'}`}

@@ -8,7 +8,7 @@ export function Projects() {
       <Title text="Projetos" />
       <Subtitle text="O que construí ou contribuí até agora?" fontSize="lg" />
 
-      <div className="my-16 grid grid-cols-3 gap-8">
+      <div className="my-12 flex flex-col gap-8 lg:my-16 lg:grid lg:grid-cols-3">
         <ProjectItem
           title="Pix Token"
           description="O Pix no Formato de Token é um processo para automatizar a Venda direta, para controlar as transferências de clientes para utilização desses valores em Filiais do Grupo Mateus, assim automatizando o processo e facilitando o processo de todas as áreas envolvidas. "

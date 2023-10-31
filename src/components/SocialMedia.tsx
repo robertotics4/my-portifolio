@@ -15,7 +15,7 @@ function SocialMediaItem({ icon, url }: SocialMediaItemProps) {
 
 export function SocialMedia() {
   return (
-    <div className="flex items-center gap-4 p-4">
+    <div className="flex items-center gap-4 p-2">
       <SocialMediaItem
         icon={
           <Github className="h-5 w-5 text-port-gray-600 hover:text-port-blue-800" />
