@@ -27,13 +27,29 @@ export function TechStack() {
         <TechImage src={javascript} alt="Logo do Javascript" />
         <TechImage src={typescript} alt="Logo do Typescript" />
         <TechImage src={java} alt="Logo do Java" />
-        <TechImage src={nodejs} alt="Logo do Node.js" />
+        <TechImage
+          src={nodejs}
+          alt="Logo do Node.js"
+          className="dark:invert-1 dark:invert"
+        />
         <TechImage src={spring} alt="Logo do SpringBoot" />
         <TechImage src={react} alt="Logo do Reactjs" />
         <TechImage src={tailwind} alt="Logo do Tailwind" />
-        <TechImage src={github} alt="Logo do Github" />
-        <TechImage src={kafka} alt="Logo do Kafka" />
-        <TechImage src={prisma} alt="Logo do Prisma" />
+        <TechImage
+          src={github}
+          alt="Logo do Github"
+          className="dark:invert-1 dark:invert"
+        />
+        <TechImage
+          src={kafka}
+          alt="Logo do Kafka"
+          className="dark:invert-1 dark:invert"
+        />
+        <TechImage
+          src={prisma}
+          alt="Logo do Prisma"
+          className="dark:invert-1 dark:invert"
+        />
         <TechImage src={jest} alt="Logo do Jest" />
         <TechImage src={vscode} alt="Logo do VSCode" />
       </div>

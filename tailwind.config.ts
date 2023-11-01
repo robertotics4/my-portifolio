@@ -16,6 +16,7 @@ const config: Config = {
         'port-gray-300': '#CCCCCC',
         'port-gray-400': '#A7A7A7',
         'port-gray-600': '#666666',
+        'port-gray-700': '#363636',
         'port-gray-900': '#3F3F3F',
         'port-black-900': '#191919',
         'port-blue-400': '#13B0F5',

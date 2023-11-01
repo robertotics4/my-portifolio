@@ -16,7 +16,7 @@ function LinkItem({ type, title, url }: LinkProps) {
     <a
       href={url}
       target="_blank"
-      className="flex gap-2 text-port-blue-800 hover:underline"
+      className="flex gap-2 text-port-blue-800 hover:underline dark:text-port-gray-300"
     >
       {linkIcons[type]}
       <span className="font-secondary text-base font-normal">{title}</span>
@@ -68,20 +68,20 @@ export function ProjectItem({
   const defaultImage = 'https://via.placeholder.com/400x200'
 
   return (
-    <div className="h-[35.43rem] rounded-2.5xl bg-white shadow-xl lg:shadow-2xl">
+    <div className="dark:bg-port-gray-700 h-[35.43rem] rounded-2.5xl bg-white shadow-xl lg:shadow-2xl">
       <img
         src={imageUrl || defaultImage}
         alt="Imagem de Capa"
         className="h-64 w-full rounded-t-2.5xl object-cover"
       />
       <div className="p-6">
-        <h2 className="lg:text-2x3 text-center font-secondary text-xl font-medium text-port-blue-800">
+        <h2 className="lg:text-2x3 text-center font-secondary text-xl font-medium text-port-blue-800 dark:text-port-gray-300">
           {title}
         </h2>
-        <p className="mt-2 line-clamp-6 h-36 text-justify font-secondary text-sm font-light text-port-gray-600 lg:text-base">
+        <p className="mt-2 line-clamp-6 h-36 text-justify font-secondary text-sm font-light text-port-gray-600 dark:text-port-gray-300 lg:text-base">
           {description}
         </p>
-        <p className="mt-2 truncate font-secondary text-sm font-normal text-port-gray-600">
+        <p className="mt-2 truncate font-secondary text-sm font-normal text-port-gray-600 dark:text-port-gray-300">
           Tech stack: {techs.join(', ')}
         </p>
 

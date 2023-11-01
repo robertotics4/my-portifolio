@@ -25,7 +25,7 @@ function Work({
         <span className="font-secondary text-xl font-normal text-port-blue-800 dark:text-port-gray-300 lg:text-2xl">
           {office}
         </span>
-        <span className="w-24 rounded-full bg-port-green-50 p-2 text-center font-secondary text-xs font-semibold text-port-green-800 dark:bg-port-green-800 dark:text-white lg:w-36 lg:text-sm">
+        <span className="w-24 rounded-full bg-port-green-50 p-2 text-center font-secondary text-xs font-semibold text-port-green-800 dark:bg-port-pink-400 dark:text-white lg:w-36 lg:text-sm">
           {workload}
         </span>
       </div>
