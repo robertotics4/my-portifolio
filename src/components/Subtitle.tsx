@@ -1,24 +1,12 @@
+import { ComponentProps } from 'react'
+
 type SubtitleProps = {
   text: string
-  fontSize?:
-    | 'xs'
-    | 'sm'
-    | 'base'
-    | 'lg'
-    | 'xl'
-    | '2xl'
-    | '3xl'
-    | '4xl'
-    | '5xl'
-    | '6xl'
-    | '7xl'
-    | '8xl'
-    | '9xl'
-}
+} & ComponentProps<'p'>
 
-export function Subtitle({ text, fontSize = 'base' }: SubtitleProps) {
+export function Subtitle({ text, className, ...props }: SubtitleProps) {
   return (
-    <p className={`font-secondary text-port-gray-600 text-${fontSize}`}>
+    <p className={`font-secondary  ${className}`} {...props}>
       {text}
     </p>
   )

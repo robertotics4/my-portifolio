@@ -11,9 +11,9 @@ type ItemProps = {
 
 function Item({ title, uri }: ItemProps) {
   return (
-    <li className="w-full transform p-8 text-center transition-all hover:scale-110 hover:font-medium lg:w-24 lg:px-0 lg:py-4 lg:hover:scale-100">
+    <li className="w-full transform p-8 text-center transition-all hover:scale-110 lg:w-24 lg:px-0 lg:py-4 lg:hover:scale-100">
       <a
-        className="text-medium font-secondary text-xl text-port-gray-600 dark:text-port-gray-400 lg:text-base"
+        className="text-medium font-secondary text-xl text-port-gray-600 transition-colors dark:text-port-gray-400 dark:hover:text-white lg:text-base"
         href={uri}
       >
         {title}

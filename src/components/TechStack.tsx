@@ -19,8 +19,8 @@ export function TechStack() {
     <div className="mt-32 flex flex-col gap-4">
       <Title text="Minha Tech Stack" />
       <Subtitle
+        className="text-port-gray-600 dark:text-port-gray-400"
         text="Tecnologias que tenho trabalhado recentemente"
-        fontSize="lg"
       />
 
       <div className="my-14 grid grid-cols-3 place-items-center gap-24  lg:my-24 lg:grid-cols-6 lg:gap-28">

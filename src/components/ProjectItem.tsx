@@ -74,11 +74,11 @@ export function ProjectItem({
         alt="Imagem de Capa"
         className="h-64 w-full rounded-t-2.5xl object-cover"
       />
-      <div className="p-6">
+      <div className="px-5 py-6">
         <h2 className="lg:text-2x3 text-center font-secondary text-xl font-medium text-port-blue-800 dark:text-port-gray-300">
           {title}
         </h2>
-        <p className="mt-2 line-clamp-6 h-36 text-justify font-secondary text-sm font-light text-port-gray-600 dark:text-port-gray-300 lg:text-base">
+        <p className="mt-2 line-clamp-6 h-36 text-start font-secondary text-sm font-light text-port-gray-600 dark:text-port-gray-300 lg:text-base">
           {description}
         </p>
         <p className="mt-2 truncate font-secondary text-sm font-normal text-port-gray-600 dark:text-port-gray-300">
