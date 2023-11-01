@@ -20,12 +20,12 @@ function Work({
   finalDate,
 }: WorkProps) {
   return (
-    <div className="flex flex-col gap-3 border-b border-b-port-gray-300 py-4 last:border-none">
+    <div className="dark:border-b-port-gray-900 flex flex-col gap-3 border-b border-b-port-gray-300 py-4 last:border-none">
       <div className="flex items-center justify-between">
-        <span className="font-secondary text-xl font-normal text-port-blue-800 lg:text-2xl">
+        <span className="font-secondary text-xl font-normal text-port-blue-800 dark:text-port-gray-300 lg:text-2xl">
           {office}
         </span>
-        <span className="w-24 rounded-full bg-port-green-50 p-2 text-center font-secondary text-xs font-semibold text-port-green-800 lg:w-36 lg:text-sm">
+        <span className="w-24 rounded-full bg-port-green-50 p-2 text-center font-secondary text-xs font-semibold text-port-green-800 dark:bg-port-green-800 dark:text-white lg:w-36 lg:text-sm">
           {workload}
         </span>
       </div>
@@ -80,7 +80,7 @@ export function Experience() {
           company="Instituto Equatorial"
           office="Full Stack Developer Pleno"
           location="Remoto"
-          workload="flex"
+          workload="full time"
           startDate={formatDateToPtBr(
             new Date(
               'Thu Dec 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)',
@@ -92,7 +92,7 @@ export function Experience() {
           company="Núcleo de Estudos e Pesquisas do Nordeste"
           office="Full Stack Developer Pleno"
           location="Remoto"
-          workload="flex"
+          workload="full time"
           startDate={formatDateToPtBr(
             new Date(
               'Thu Dec 01 2022 00:00:00 GMT-0300 (Horário Padrão de Brasília)',

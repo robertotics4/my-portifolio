@@ -21,23 +21,16 @@ export function Presentation() {
             'Olá 👋, meu nome é Roberto Oliveira e transformo ideias em soluções de tecnologia',
           ]}
           typeSpeed={20}
-          className="font-primary text-4xl font-bold text-port-blue-800 lg:text-6xl"
+          className="dark:text-port-gray-100 font-primary text-4xl font-bold text-port-blue-800 lg:text-6xl"
           onStringTyped={(arrayPos: number, self: any) => {
             if (arrayPos === 0) {
               self.el.innerHTML = self.el.innerHTML.replace(
                 'Roberto Oliveira',
-                '<span class="bg-gradient-to-r from-port-blue-400 to-port-pink-400 bg-clip-text text-transparent">Roberto Oliveira</span>',
+                '<span class="bg-gradient-to-tr from-port-blue-400 to-port-pink-400 bg-clip-text text-transparent">Roberto Oliveira</span>',
               )
             }
           }}
         />
-        {/* <strong className="font-primary text-4xl text-port-blue-800 lg:text-6xl">
-          Olá 👋, meu nome é{' '}
-          <strong className="bg-gradient-to-r from-port-blue-400 to-port-pink-400 bg-clip-text text-transparent">
-            Roberto Oliveira{' '}
-          </strong>
-          e transformo ideias em soluções de tecnologia
-        </strong> */}
       </div>
     </div>
   )
