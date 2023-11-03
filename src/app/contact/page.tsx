@@ -5,41 +5,73 @@ import { Mail, Phone } from 'lucide-react'
 import { Subtitle } from '@/components/Subtitle'
 import { ContactButton } from '@/components/ContactButton'
 
+type Contact = {
+  id: number
+  type: 'mail' | 'phone'
+  value: string
+}
+
+const contacts: Contact[] = [
+  { id: 1, type: 'mail', value: 'robertooliveiragp@gmail.com' },
+  { id: 2, type: 'phone', value: '(98) 98191-8733' },
+]
+
 export default function ContactPage() {
+  const existentPhone = contacts
+    .filter((contact) => contact.type === 'phone')
+    .pop()
+
+  function generateWhatsAppLink(phoneNumber: string) {
+    const cleanedPhoneNumber = phoneNumber.replace(/[^\d]+/g, '')
+    const message = 'Olá! visitei o seu site e gostaria de falar com você.'
+    const whatsappLink = `https://wa.me/${cleanedPhoneNumber}/?text=${encodeURIComponent(
+      message,
+    )}`
+
+    return whatsappLink
+  }
+
   return (
-    <div className="lg:divide-port-gray-900 mt-48 flex flex-col items-center justify-center gap-24 lg:flex-row lg:divide-x-2">
+    <div className="mt-36 flex flex-col items-center justify-center gap-12 lg:mt-48 lg:flex-row lg:gap-24 lg:divide-x-2 lg:divide-port-gray-900">
       <div className="flex flex-col gap-12">
         <Title text="Contatos" />
 
         <div className="flex flex-col gap-4">
-          <span className="flex items-center gap-2 font-secondary text-lg text-port-gray-600 dark:text-port-gray-300">
-            <Mail className="h-5 w-5" />
-            robertooliveiragp@gmail.com
-          </span>
-
-          <span className="flex items-center gap-2 font-secondary text-lg text-port-gray-600 dark:text-port-gray-300">
-            <Phone className="h-5 w-5" />
-            (98) 98191-8733
-          </span>
+          {contacts.map((contact) => (
+            <span
+              key={contact.id}
+              className="flex items-center gap-2 font-secondary text-lg text-port-gray-600 dark:text-port-gray-300"
+            >
+              {contact.type === 'mail' ? (
+                <Mail className="h-5 w-5" />
+              ) : (
+                <Phone className="h-5 w-5" />
+              )}
+              {contact.value}
+            </span>
+          ))}
         </div>
       </div>
 
-      <div className="flex flex-col items-center gap-4 pt-16 lg:pl-24 lg:pt-0">
+      <div className="flex flex-col items-center gap-4 lg:pl-24 lg:pt-0">
         <Subtitle
           text="Mande uma mensagem"
           className="text-lg text-port-gray-600 dark:text-port-gray-300"
         />
-        <ContactButton
-          title="Whatsapp"
-          url="https://wa.me/+559881918733/?text=Olá,%20estou%20entrando%20em%20contato%20via%20seu%20site"
-          icon={
-            <Image
-              src={whatsappIcon}
-              alt="Ícone do Whatsapp"
-              className="h-8 w-8"
-            />
-          }
-        />
+
+        {existentPhone && (
+          <ContactButton
+            title="Whatsapp"
+            url={generateWhatsAppLink(existentPhone.value)}
+            icon={
+              <Image
+                src={whatsappIcon}
+                alt="Ícone do Whatsapp"
+                className="h-8 w-8"
+              />
+            }
+          />
+        )}
       </div>
     </div>
   )
