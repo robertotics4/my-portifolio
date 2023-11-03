@@ -21,7 +21,7 @@ export function Presentation() {
             'Olá 👋, meu nome é Roberto Oliveira e transformo ideias em soluções de tecnologia',
           ]}
           typeSpeed={20}
-          className="dark:text-port-gray-100 font-primary text-4xl font-bold text-port-blue-800 lg:text-6xl"
+          className="font-primary text-4xl font-bold text-port-blue-800 dark:text-port-gray-100 lg:text-6xl"
           onStringTyped={(arrayPos: number, self: any) => {
             if (arrayPos === 0) {
               self.el.innerHTML = self.el.innerHTML.replace(
