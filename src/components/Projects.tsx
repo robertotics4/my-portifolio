@@ -4,14 +4,14 @@ import { Title } from './Title'
 
 export function Projects() {
   return (
-    <div className="mt-32 flex flex-col gap-4">
+    <div className="flex flex-1 flex-col justify-center gap-4 py-12">
       <Title text="Projetos" />
       <Subtitle
         className="text-port-600 dark:text-port-gray-400"
         text="O que construí ou contribuí até agora?"
       />
 
-      <div className="my-12 flex flex-col gap-8 lg:my-16 lg:grid lg:grid-cols-3">
+      <div className="flex flex-col gap-8 lg:my-16 lg:grid lg:grid-cols-3">
         <ProjectItem
           title="Pix Token"
           description="O Pix no Formato de Token é um processo para automatizar a Venda direta, para controlar as transferências de clientes para utilização desses valores em Filiais do Grupo Mateus, assim automatizando o processo e facilitando o processo de todas as áreas envolvidas. "

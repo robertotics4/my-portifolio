@@ -18,7 +18,7 @@ export default function RootLayout({
       <body className="flex h-screen flex-col items-center bg-zinc-50 px-6 py-4 dark:bg-port-black-900">
         <div className="flex h-full w-full max-w-7xl flex-col">
           <Navbar />
-          <main className="flex-1">{children}</main>
+          <main className="flex flex-1 flex-col">{children}</main>
           <Footer />
         </div>
       </body>

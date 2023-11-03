@@ -23,7 +23,7 @@ export default function ContactPage() {
     .pop()
 
   return (
-    <div className="mt-36 flex flex-col items-center justify-center gap-12 lg:mt-48 lg:flex-row lg:gap-24 lg:divide-x-2 lg:divide-port-gray-900">
+    <div className="flex flex-1 flex-col items-center justify-center gap-12 lg:flex-row lg:gap-24 lg:divide-x-2 lg:divide-port-gray-900">
       <div className="flex flex-col gap-12">
         <Title text="Contatos" />
 
