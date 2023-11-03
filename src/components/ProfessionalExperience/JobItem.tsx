@@ -1,4 +1,4 @@
-import { formatDateToPtBr } from '@/util/formatDateToPtBR'
+import { formatDateToPtBR } from '@/util'
 import { Building, CalendarDays, MapPin } from 'lucide-react'
 
 export type Job = {
@@ -41,8 +41,8 @@ export function JobItem({
         </span>
         <span className="flex items-center gap-2 font-secondary text-sm font-medium text-port-gray-400">
           <CalendarDays size={18} />
-          {`${formatDateToPtBr(startDate)} - ${
-            finalDate ? formatDateToPtBr(finalDate) : 'atual'
+          {`${formatDateToPtBR(startDate)} - ${
+            finalDate ? formatDateToPtBR(finalDate) : 'atual'
           }`}
         </span>
       </div>

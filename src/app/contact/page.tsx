@@ -4,6 +4,7 @@ import whatsappIcon from '../../../public/assets/icons/whatsapp.svg'
 import { Mail, Phone } from 'lucide-react'
 import { Subtitle } from '@/components/Subtitle'
 import { ContactButton } from '@/components/ContactButton'
+import { generateWhatsAppLink } from '@/util'
 
 type Contact = {
   id: number
@@ -20,16 +21,6 @@ export default function ContactPage() {
   const existentPhone = contacts
     .filter((contact) => contact.type === 'phone')
     .pop()
-
-  function generateWhatsAppLink(phoneNumber: string) {
-    const cleanedPhoneNumber = phoneNumber.replace(/[^\d]+/g, '')
-    const message = 'Olá! visitei o seu site e gostaria de falar com você.'
-    const whatsappLink = `https://wa.me/${cleanedPhoneNumber}/?text=${encodeURIComponent(
-      message,
-    )}`
-
-    return whatsappLink
-  }
 
   return (
     <div className="mt-36 flex flex-col items-center justify-center gap-12 lg:mt-48 lg:flex-row lg:gap-24 lg:divide-x-2 lg:divide-port-gray-900">
@@ -62,7 +53,10 @@ export default function ContactPage() {
         {existentPhone && (
           <ContactButton
             title="Whatsapp"
-            url={generateWhatsAppLink(existentPhone.value)}
+            url={generateWhatsAppLink(
+              existentPhone.value,
+              'Olá, visitei o seu site e quero falar com você.',
+            )}
             icon={
               <Image
                 src={whatsappIcon}
