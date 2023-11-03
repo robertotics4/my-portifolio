@@ -1,9 +1,13 @@
-import { Experience } from '@/components/Experience'
+import { ProfessionalExperience } from '@/components/ProfessionalExperience'
+import { Job } from '@/components/ProfessionalExperience/JobItem'
 import { Resume } from '@/components/Resume'
 
 type AboutMe = {
   resume: {
     paragraphs: string[]
+  }
+  professionalExperience: {
+    jobs: Job[]
   }
 }
 
@@ -17,13 +21,52 @@ const aboutMe: AboutMe = {
       'Estou ansioso para aplicar meu conhecimento e experiência em novos projetos emocionantes. Se você procura um desenvolvedor dedicado, apaixonado pela tecnologia e pronto para criar soluções eficazes, estou à disposição para colaborar.',
     ],
   },
+  professionalExperience: {
+    jobs: [
+      {
+        id: 1,
+        company: 'PULSE - Grupo Mateus',
+        office: 'Backend Developer Senior',
+        location: 'Remoto | São Luis - Maranhão',
+        workload: 'full time',
+        startDate: new Date('2022-06-06'),
+      },
+      {
+        id: 2,
+        company: 'MKOM Soluções Tecnológicas',
+        office: 'Backend Developer Pleno',
+        location: 'Remoto',
+        workload: 'flex',
+        startDate: new Date('2022-12-01'),
+      },
+      {
+        id: 3,
+        company: 'Instituto Equatorial',
+        office: 'Full Stack Developer Pleno',
+        location: 'Remoto',
+        workload: 'full time',
+        startDate: new Date('2022-03-14'),
+        finalDate: new Date('2022-06-03'),
+      },
+      {
+        id: 4,
+        company: 'Núcleo de Estudos e Pesquisas do Nordeste',
+        office: 'Full Stack Developer Pleno',
+        location: 'Remoto',
+        workload: 'full time',
+        startDate: new Date('2020-03-23'),
+        finalDate: new Date('2022-03-11'),
+      },
+    ],
+  },
 }
 
 export default function AboutPage() {
+  const { resume, professionalExperience } = aboutMe
   return (
     <div className="mt-16 flex flex-col gap-16 pb-24 pt-12">
-      <Resume paragraphs={aboutMe.resume.paragraphs} />
-      <Experience />
+      <Resume paragraphs={resume.paragraphs} />
+      <ProfessionalExperience jobs={professionalExperience.jobs} />
     </div>
   )
 }
