@@ -64,7 +64,7 @@ const aboutMe: AboutMe = {
 export default function AboutPage() {
   const { resume, professionalExperience } = aboutMe
   return (
-    <div className="flex flex-1 flex-col justify-center gap-16 pb-24 pt-12">
+    <div className="flex flex-1 flex-col gap-16 pb-24 pt-12">
       <Resume paragraphs={resume.paragraphs} />
       <ProfessionalExperience jobs={professionalExperience.jobs} />
     </div>

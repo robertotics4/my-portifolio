@@ -16,7 +16,7 @@ import { Subtitle } from './Subtitle'
 
 export function TechStack() {
   return (
-    <div className="flex flex-1 flex-col justify-center gap-4">
+    <div className="flex flex-1 flex-col justify-center gap-4 pt-12">
       <Title text="Minha Tech Stack" />
       <Subtitle
         className="text-port-gray-600 dark:text-port-gray-400"

@@ -6,7 +6,7 @@ import profileImage from '../../public/assets/profile.png'
 
 export function Presentation() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center gap-14 py-4 text-center lg:flex-row-reverse lg:place-content-between lg:gap-0 lg:text-left">
+    <div className="flex flex-1 flex-col items-center justify-center gap-14 py-8 text-center lg:flex-row-reverse lg:place-content-between lg:gap-0 lg:text-left">
       <div className="flex h-64 w-64 items-center justify-center rounded-full bg-gradient-to-r from-port-blue-400 to-port-pink-400 lg:h-84 lg:w-84">
         <Image
           src={profileImage}
