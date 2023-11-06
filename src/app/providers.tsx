@@ -1,15 +1,13 @@
 'use client'
 
-import { ThemeProvider, useTheme } from 'next-themes'
+import { ThemeProvider } from 'next-themes'
 
 export function Providers({ children }: { children: React.ReactNode }) {
-  const { systemTheme } = useTheme()
-
   return (
     <ThemeProvider
-      themes={['light', 'dark', 'system']}
+      themes={['light', 'dark']}
       attribute="class"
-      defaultTheme={systemTheme}
+      defaultTheme="dark"
     >
       {children}
     </ThemeProvider>
