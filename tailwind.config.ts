@@ -2,6 +2,7 @@ import type { Config } from 'tailwindcss'
 
 const config: Config = {
   content: ['./src/**/*.tsx'],
+  darkMode: 'class',
   theme: {
     extend: {
       width: {
@@ -27,6 +28,7 @@ const config: Config = {
         'port-green-600': '#04C418',
         'port-green-800': '#018C0F',
         'port-green-850': '#005C4B',
+        'port-yellow-400': '#F7DF1E',
       },
       borderRadius: {
         '2.5xl': '1.25rem',
