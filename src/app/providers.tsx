@@ -6,7 +6,11 @@ export function Providers({ children }: { children: React.ReactNode }) {
   const { systemTheme } = useTheme()
 
   return (
-    <ThemeProvider attribute="class" defaultTheme={systemTheme}>
+    <ThemeProvider
+      themes={['light', 'dark', 'system']}
+      attribute="class"
+      defaultTheme={systemTheme}
+    >
       {children}
     </ThemeProvider>
   )
